@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d5ce7">
+<title>Sổ tay Ngữ văn – Ôn tập tổng hợp</title>
+<style>
+:root{--bg:#f6f5ff;--card:#fff;--ink:#24233a;--muted:#6f6d83;--primary:#6d5ce7;--soft:#eeebff;--line:#e8e5f2;--good:#16845b;--bad:#c44c58}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{padding:28px 18px 24px;background:linear-gradient(135deg,#6555df,#9586f3);color:white}
+.wrap{max-width:900px;margin:auto;padding:0 14px}
+.kicker{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85;font-weight:700}
+h1{font-size:clamp(1.65rem,5vw,2.5rem);line-height:1.15;margin:8px 0}
+header p{margin:8px 0 0;opacity:.93}
+nav{display:flex;gap:8px;overflow-x:auto;padding:12px 0;position:sticky;top:0;background:var(--bg);z-index:5}
+nav button,.btn{border:0;border-radius:12px;padding:10px 14px;background:var(--soft);color:var(--primary);font-weight:700;white-space:nowrap;cursor:pointer}
+nav button.active,.btn.primary{background:var(--primary);color:#fff}
+main{padding-bottom:40px}.panel{display:none}.panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;margin:12px 0;box-shadow:0 5px 18px #3324770a}
+h2{font-size:1.35rem;margin:4px 0 12px}h3{font-size:1.05rem;margin:16px 0 6px;color:#5145ad}
+p{margin:7px 0}.muted{color:var(--muted)}.tag{display:inline-block;background:var(--soft);color:#5849c4;border-radius:99px;padding:3px 9px;font-size:.78rem;font-weight:700}
+ul,ol{padding-left:22px;margin:7px 0}.tip{border-left:4px solid var(--primary);background:#f4f1ff;padding:10px 12px;border-radius:8px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+details{border:1px solid var(--line);border-radius:12px;padding:11px 13px;margin:9px 0;background:#fff}
+summary{font-weight:700;cursor:pointer}
+.question{padding:15px 0;border-bottom:1px solid var(--line)}.question:last-child{border:0}
+.question p{font-weight:700;margin:0 0 9px}.option{display:flex;gap:9px;align-items:flex-start;padding:8px 10px;border:1px solid var(--line);border-radius:10px;margin:6px 0;cursor:pointer}
+.option:has(input:checked){border-color:var(--primary);background:#f6f4ff}
+.option input{margin-top:5px;accent-color:var(--primary)}
+.feedback{font-size:.92rem;margin-top:7px;padding:9px 11px;border-radius:9px;display:none}
+.feedback.show{display:block}.correct{background:#eaf8f1;color:#126b49}.incorrect{background:#fff0f1;color:#9d3440}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.score{font-size:1.1rem;font-weight:800}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:20px}
+button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #b5adff;outline-offset:2px}
+@media(max-width:520px){.card{padding:15px;border-radius:15px}nav button{padding:9px 12px;font-size:.9rem}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="kicker">Sổ tay học tập • Ngữ văn THPT</div>
+<h1>Ôn tập Ngữ văn<br>Hiểu sâu – Viết tốt – Nhớ lâu</h1>
+<p>Tóm tắt kiến thức trọng tâm, mẹo làm bài và bài trắc nghiệm tự chấm điểm.</p>
+</div></header>
+<div class="wrap">
+<nav aria-label="Các mục học tập">
+<button class="active" data-tab="overview">Tổng quan</button>
+<button data-tab="reading">Đọc hiểu</button>
+<button data-tab="literature">Tiếng Việt & văn học</button>
+<button data-tab="writing">Làm văn</button>
+<button data-tab="quiz">Luyện tập</button>
+</nav>
+<main>
+<section id="overview" class="panel active">
+<div class="card">
+<span class="tag">Cách sử dụng</span>
+<h2>Học theo 3 bước</h2>
+<div class="grid">
+<div><h3>① Nắm kiến thức</h3><p>Đọc từng mục, chú ý từ khóa in đậm và ví dụ.</p></div>
+<div><h3>② Tự ghi nhớ</h3><p>Đóng phần ghi chú, thử trình bày lại bằng lời của mình.</p></div>
+<div><h3>③ Kiểm tra</h3><p>Làm bài trắc nghiệm, xem điểm và đọc giải thích sau khi nộp.</p></div>
+</div>
+<div class="tip"><b>Lưu ý:</b> Đây là tài liệu ôn tập kiến thức Ngữ văn THPT có tính khái quát. Khi làm bài kiểm tra, hãy ưu tiên yêu cầu đề và kiến thức đúng với chương trình/lớp đang học.</div>
+</div>
+<div class="card">
+<h2>Bản đồ kiến thức</h2>
+<ul>
+<li><b>Đọc hiểu:</b> xác định thể loại, phương thức biểu đạt, ngôi kể, điểm nhìn, nội dung và thông điệp.</li>
+<li><b>Tiếng Việt:</b> biện pháp tu từ, từ ngữ, câu, liên kết và tác dụng diễn đạt.</li>
+<li><b>Văn học:</b> nhân vật trữ tình, hình tượng, chi tiết, chủ đề, cảm hứng và phong cách.</li>
+<li><b>Làm văn:</b> nghị luận xã hội, nghị luận văn học, phân tích và so sánh tác phẩm.</li>
+</ul>
+</div>
+<div class="card">
+<h2>Mẹo trình bày để bài làm rõ ý</h2>
+<ul>
+<li>Trả lời đúng trọng tâm câu hỏi, tránh kể lại dài dòng.</li>
+<li>Mỗi luận điểm nên có lí lẽ và dẫn chứng phù hợp.</li>
+<li>Phân tích dẫn chứng: nêu chi tiết/câu thơ → giải thích → nhận xét ý nghĩa.</li>
+<li>Dùng từ nối linh hoạt: trước hết, đồng thời, hơn nữa, mặt khác, từ đó, sau cùng…</li>
+<li>Đọc lại bài để sửa lỗi chính tả, diễn đạt và lặp từ.</li>
+</ul>
+</div>
+</section>
+
+<section id="reading" class="panel">
+<div class="card">
+<h2>1. Kĩ năng đọc hiểu</h2>
+<h3>Những phương thức biểu đạt thường gặp</h3>
+<ul>
+<li><b>Tự sự:</b> kể lại sự việc, câu chuyện, diễn biến.</li>
+<li><b>Miêu tả:</b> tái hiện đặc điểm, trạng thái của sự vật, con người.</li>
+<li><b>Biểu cảm:</b> bộc lộ tình cảm, cảm xúc.</li>
+<li><b>Thuyết minh:</b> giới thiệu, giải thích tri thức về sự vật, hiện tượng.</li>
+<li><b>Nghị luận:</b> nêu ý kiến, lí lẽ và bằng chứng để thuyết phục.</li>
+<li><b>Hành chính – công vụ:</b> trình bày theo khuôn mẫu văn bản hành chính.</li>
+</ul>
+<h3>Ngôi kể và tác dụng</h3>
+<ul>
+<li><b>Ngôi thứ nhất:</b> người kể xưng “tôi”, “chúng tôi”…; tạo cảm giác gần gũi, chân thực, thuận lợi để bộc lộ trải nghiệm và cảm xúc.</li>
+<li><b>Ngôi thứ ba:</b> người kể không trực tiếp xưng “tôi”; có thể tạo cái nhìn bao quát, linh hoạt khi kể về nhiều nhân vật/sự việc.</li>
+</ul>
+<h3>Điểm nhìn trần thuật</h3>
+<p>Là vị trí, góc độ mà từ đó người kể quan sát và kể lại câu chuyện. Điểm nhìn có thể gắn với người kể chuyện hoặc một nhân vật; góp phần chi phối thông tin, cảm xúc và cách người đọc tiếp nhận sự việc.</p>
+<h3>Các yếu tố cần nhận diện trong thơ</h3>
+<ul>
+<li><b>Chủ thể trữ tình:</b> chủ thể cất tiếng nói cảm xúc, suy tư trong bài thơ.</li>
+<li><b>Hình ảnh thơ:</b> hình ảnh cụ thể hoặc giàu tính biểu tượng, góp phần thể hiện cảm xúc và tư tưởng.</li>
+<li><b>Mạch cảm xúc:</b> sự vận động, phát triển của cảm xúc trong tác phẩm.</li>
+<li><b>Thông điệp:</b> điều tác giả gửi gắm qua hình tượng, cảm xúc và suy ngẫm.</li>
+</ul>
+</div>
+<div class="card">
+<h2>2. Cách trả lời câu hỏi đọc hiểu</h2>
+<details open><summary>Nhận biết thể thơ</summary><p>Dựa vào số tiếng mỗi dòng, cách gieo vần, ngắt nhịp và hình thức tổ chức dòng thơ. Không chỉ dựa vào cảm giác khi đọc.</p></details>
+<details><summary>Xác định biện pháp tu từ</summary><p>Nêu đúng tên biện pháp, chỉ ra từ ngữ/hình ảnh thể hiện, rồi phân tích tác dụng về nội dung và nghệ thuật.</p></details>
+<details><summary>Nêu nội dung chính</summary><p>Trả lời văn bản/bài thơ viết về ai, về điều gì và thể hiện tình cảm hoặc suy nghĩ nào.</p></details>
+<details><summary>Rút ra thông điệp/bài học</summary><p>Nêu thông điệp ngắn gọn, giải thích vì sao có ý nghĩa, sau đó liên hệ hành động thiết thực của bản thân.</p></details>
+<div class="tip"><b>Công thức phân tích tu từ:</b> Gọi tên → Dẫn từ ngữ/hình ảnh → Nêu tác dụng gợi hình, gợi cảm/nhấn mạnh → Làm rõ cảm xúc, thái độ hoặc thông điệp.</div>
+</div>
+</section>
+
+<section id="literature" class="panel">
+<div class="card">
+<h2>3. Biện pháp tu từ thường gặp</h2>
+<div class="grid">
+<div><h3>So sánh</h3><p>Đối chiếu hai sự vật có nét tương đồng nhằm làm nổi bật đặc điểm.</p><p class="muted">Dấu hiệu thường gặp: như, tựa, là…</p></div>
+<div><h3>Nhân hóa</h3><p>Gọi hoặc tả sự vật bằng từ ngữ vốn dùng cho con người, khiến sự vật sinh động, gần gũi.</p></div>
+<div><h3>Ẩn dụ</h3><p>Gọi tên sự vật này bằng tên sự vật khác dựa trên nét tương đồng.</p></div>
+<div><h3>Hoán dụ</h3><p>Gọi tên sự vật bằng tên một sự vật khác có quan hệ gần gũi với nó.</p></div>
+<div><h3>Điệp ngữ</h3><p>Lặp lại từ ngữ/cấu trúc để nhấn mạnh ý, tạo nhịp điệu và cảm xúc.</p></div>
+<div><h3>Nói quá</h3><p>Phóng đại mức độ, quy mô hoặc tính chất để nhấn mạnh, gây ấn tượng.</p></div>
+<div><h3>Nói giảm, nói tránh</h3><p>Diễn đạt nhẹ nhàng, tế nhị để giảm cảm giác đau buồn, nặng nề hoặc tránh thô tục.</p></div>
+<div><h3>Liệt kê</h3><p>Sắp xếp nối tiếp nhiều từ/cụm từ cùng loại để diễn tả đầy đủ, cụ thể.</p></div>
+<div><h3>Câu hỏi tu từ</h3><p>Có hình thức hỏi nhưng chủ yếu để khẳng định, phủ định, bộc lộ cảm xúc hoặc suy tư.</p></div>
+</div>
+</div>
+<div class="card">
+<h2>4. Một số khái niệm văn học</h2>
+<ul>
+<li><b>Đề tài:</b> phạm vi đời sống được tác phẩm phản ánh.</li>
+<li><b>Chủ đề:</b> vấn đề trung tâm mà tác phẩm đặt ra và thể hiện.</li>
+<li><b>Tư tưởng:</b> nhận thức, quan niệm và thái độ của nhà văn gửi gắm trong tác phẩm.</li>
+<li><b>Cảm hứng chủ đạo:</b> tình cảm, cảm xúc nổi bật chi phối tác phẩm.</li>
+<li><b>Hình tượng nghệ thuật:</b> hình ảnh đời sống được sáng tạo bằng phương tiện nghệ thuật, mang ý nghĩa thẩm mĩ.</li>
+<li><b>Chi tiết nghệ thuật:</b> yếu tố nhỏ nhưng có giá trị thể hiện tính cách, tâm trạng hoặc tư tưởng tác phẩm.</li>
+</ul>
+<h3>Đặc trưng cơ bản của truyện và thơ</h3>
+<p><b>Truyện:</b> thường có cốt truyện, nhân vật, tình huống, người kể chuyện, điểm nhìn và chi tiết nghệ thuật.</p>
+<p><b>Thơ:</b> thường tập trung thể hiện cảm xúc, suy tư qua hình ảnh, ngôn ngữ hàm súc, nhịp điệu, vần và các biện pháp tu từ.</p>
+</div>
+</section>
+
+<section id="writing" class="panel">
+<div class="card">
+<h2>5. Nghị luận xã hội</h2>
+<p><span class="tag">Bố cục tham khảo</span></p>
+<h3>Mở bài</h3><p>Dẫn dắt ngắn gọn, giới thiệu vấn đề cần bàn luận và nêu quan điểm.</p>
+<h3>Thân bài</h3>
+<ol>
+<li><b>Giải thích:</b> làm rõ khái niệm, biểu hiện của vấn đề.</li>
+<li><b>Phân tích, bàn luận:</b> nêu ý nghĩa/tác hại, nguyên nhân và biểu hiện; dùng lí lẽ, dẫn chứng tiêu biểu.</li>
+<li><b>Mở rộng:</b> nhìn nhận mặt trái, phản biện quan điểm chưa đúng hoặc bổ sung góc nhìn.</li>
+<li><b>Bài học:</b> rút ra nhận thức và hành động cụ thể.</li>
+</ol>
+<h3>Kết bài</h3><p>Khẳng định lại vấn đề, gửi gắm thông điệp hoặc lời nhắn nhủ.</p>
+<div class="tip"><b>Ghi nhớ:</b> Dẫn chứng cần xác thực, tiêu biểu, liên quan trực tiếp đến luận điểm. Sau dẫn chứng phải có phân tích, không chỉ kể tên.</div>
+</div>
+<div class="card">
+<h2>6. Nghị luận văn học</h2>
+<h3>Phân tích một tác phẩm/đoạn trích</h3>
+<ol>
+<li>Giới thiệu tác giả, tác phẩm và vấn đề nghị luận.</li>
+<li>Phân tích nội dung qua hình tượng, nhân vật, hình ảnh, chi tiết hoặc mạch cảm xúc.</li>
+<li>Phân tích nghệ thuật gắn với hiệu quả biểu đạt: ngôn ngữ, giọng điệu, kết cấu, điểm nhìn, biện pháp tu từ…</li>
+<li>Đánh giá giá trị nội dung, nghệ thuật và đóng góp của tác phẩm.</li>
+</ol>
+<h3>So sánh, đánh giá hai tác phẩm thơ</h3>
+<ol>
+<li><b>Giới thiệu:</b> nêu hai tác giả, tác phẩm và phương diện so sánh.</li>
+<li><b>Điểm tương đồng:</b> đề tài/chủ đề, cảm xúc, hình tượng hoặc thông điệp.</li>
+<li><b>Điểm khác biệt:</b> cách cảm nhận, hình ảnh, ngôn ngữ, giọng điệu, bút pháp và phong cách.</li>
+<li><b>Lí giải:</b> đặt trong hoàn cảnh sáng tác, phong cách và cá tính sáng tạo của mỗi tác giả khi có căn cứ.</li>
+<li><b>Đánh giá:</b> khẳng định giá trị riêng và nét gặp gỡ của hai tác phẩm.</li>
+</ol>
+<div class="tip"><b>Mẹo tránh kể lể:</b> Mỗi luận điểm nên có nhận xét khái quát, dẫn chứng ngắn, phân tích từ ngữ/hình ảnh và câu đánh giá. Khi so sánh, cần đặt hai tác phẩm cạnh nhau ở cùng một phương diện.</div>
+</div>
+<div class="card">
+<h2>7. Một số cách diễn đạt linh hoạt</h2>
+<ul>
+<li>“Trước hết, tác phẩm gây ấn tượng bởi…”</li>
+<li>“Không dừng lại ở đó, hình ảnh… còn gợi lên…”</li>
+<li>“Đáng chú ý hơn, cách sử dụng… đã góp phần…”</li>
+<li>“Nếu ở tác phẩm thứ nhất…, thì ở tác phẩm thứ hai…”</li>
+<li>“Sự gặp gỡ ấy cho thấy…, trong khi nét riêng lại thể hiện ở…”</li>
+<li>“Qua đó, người đọc cảm nhận được…”</li>
+<li>“Từ những phương diện trên, có thể khẳng định…”</li>
+</ul>
+</div>
+</section>
+
+<section id="quiz" class="panel">
+<div class="card">
+<span class="tag">15 câu • 1 điểm/câu</span>
+<h2>Trắc nghiệm ôn tập</h2>
+<p class="muted">Chọn một đáp án cho mỗi câu, sau đó nhấn “Nộp bài” để xem điểm và lời giải.</p>
+<div id="quiz-area"></div>
+<div class="actions">
+<button class="btn primary" id="submit">Nộp bài và chấm điểm</button>
+<button class="btn" id="reset">Làm lại</button>
+</div>
+<div id="result" class="card" style="display:none;margin-top:16px"></div>
+</div>
+</section>
+</main>
+<footer>Sổ tay Ngữ văn • Tài liệu tự học tham khảo • Hãy kết hợp với sách giáo khoa và hướng dẫn của giáo viên.</footer>
+</div>
+<script>
+const questions = [
+{q:"Phương thức biểu đạt chủ yếu của văn bản dùng lí lẽ và bằng chứng để thuyết phục người đọc là gì?",o:["Tự sự","Nghị luận","Miêu tả","Biểu cảm"],a:1,e:"Nghị luận sử dụng luận điểm, lí lẽ và bằng chứng để làm sáng tỏ, bảo vệ một ý kiến."},
+{q:"Người kể chuyện xưng “tôi” thường kể ở ngôi nào?",o:["Ngôi thứ nhất","Ngôi thứ hai","Ngôi thứ ba","Không xác định"],a:0,e:"Người kể xưng “tôi”, “chúng tôi”… là dấu hiệu phổ biến của ngôi kể thứ nhất."},
+{q:"Yếu tố nào cho biết góc độ quan sát và kể lại câu chuyện?",o:["Vần thơ","Điểm nhìn trần thuật","Nhan đề","Số tiếng"],a:1,e:"Điểm nhìn trần thuật là vị trí/góc độ mà từ đó câu chuyện được quan sát và kể lại."},
+{q:"Gọi sự vật bằng tên sự vật khác dựa trên nét tương đồng là biện pháp nào?",o:["Hoán dụ","Liệt kê","Ẩn dụ","Nói giảm"],a:2,e:"Ẩn dụ dựa trên quan hệ tương đồng; hoán dụ dựa trên quan hệ gần gũi."},
+{q:"Lặp lại từ ngữ hoặc cấu trúc nhằm nhấn mạnh ý và tạo nhịp điệu là…",o:["Điệp ngữ","Nói quá","So sánh","Đảo ngữ"],a:0,e:"Điệp ngữ là sự lặp lại có dụng ý để nhấn mạnh và tăng sức biểu cảm."},
+{q:"Khái niệm nào chỉ vấn đề trung tâm mà tác phẩm đặt ra?",o:["Đề tài","Chủ đề","Cốt truyện","Ngôi kể"],a:1,e:"Chủ đề là vấn đề trung tâm được tác phẩm tập trung thể hiện; đề tài là phạm vi đời sống được phản ánh."},
+{q:"Trong thơ, chủ thể cất tiếng nói cảm xúc và suy tư được gọi là gì?",o:["Người đọc","Chủ thể trữ tình","Người biên tập","Nhân vật phụ"],a:1,e:"Chủ thể trữ tình là chủ thể thể hiện tiếng nói cảm xúc, suy tư trong tác phẩm thơ."},
+{q:"Khi phân tích biện pháp tu từ, cách trả lời đầy đủ nhất là…",o:["Chỉ nêu tên biện pháp","Chép lại cả đoạn thơ","Nêu tên, chỉ ra biểu hiện và phân tích tác dụng","Chỉ nêu cảm nhận chung"],a:2,e:"Cần gọi tên, chỉ ra từ ngữ/hình ảnh cụ thể và phân tích hiệu quả về nội dung, nghệ thuật."},
+{q:"Yếu tố nào sau đây thường thuộc đặc trưng của truyện?",o:["Nhân vật và tình huống","Vần và nhịp là yếu tố duy nhất","Chỉ có chủ thể trữ tình","Không có người kể"],a:0,e:"Truyện thường có nhân vật, tình huống, sự kiện, cốt truyện và người kể chuyện."},
+{q:"Trong bài nghị luận xã hội, sau khi đưa dẫn chứng, người viết nên làm gì?",o:["Chuyển ngay sang kết bài","Phân tích để làm rõ luận điểm","Thêm nhiều dẫn chứng không liên quan","Kể lại toàn bộ tiểu sử nhân vật"],a:1,e:"Dẫn chứng cần được phân tích để chứng minh và làm sáng tỏ luận điểm."},
+{q:"Phần mở bài của bài nghị luận thường có nhiệm vụ chính nào?",o:["Giới thiệu vấn đề và nêu hướng bàn luận","Phân tích mọi dẫn chứng","Liệt kê toàn bộ tài liệu","Chỉ viết bài học cá nhân"],a:0,e:"Mở bài dẫn vào và giới thiệu vấn đề nghị luận; có thể nêu quan điểm/định hướng triển khai."},
+{q:"Khi so sánh hai bài thơ, thao tác nào là cần thiết?",o:["Chỉ kể nội dung từng bài","Chỉ tìm điểm giống nhau","Đối chiếu điểm giống và khác trên cùng phương diện","Bỏ qua đặc điểm riêng của tác giả"],a:2,e:"So sánh cần chỉ ra tương đồng, khác biệt và đánh giá giá trị riêng của mỗi tác phẩm."},
+{q:"“Mạch cảm xúc” trong thơ được hiểu là gì?",o:["Số lượng câu thơ","Sự vận động, phát triển của cảm xúc","Tên tác giả","Cách trình bày trang giấy"],a:1,e:"Mạch cảm xúc là quá trình cảm xúc triển khai, chuyển biến trong bài thơ."},
+{q:"Yêu cầu quan trọng của dẫn chứng trong bài nghị luận là gì?",o:["Càng dài càng tốt","Phải nổi tiếng","Xác thực, tiêu biểu và phù hợp luận điểm","Không cần liên quan"],a:2,e:"Dẫn chứng nên đáng tin cậy, tiêu biểu, đúng trọng tâm và được phân tích hợp lí."},
+{q:"Kết bài nghị luận văn học thường cần làm gì?",o:["Đưa thêm một tác phẩm hoàn toàn mới","Khẳng định, đánh giá lại vấn đề và giá trị tác phẩm","Chép lại toàn bộ thân bài","Nêu một luận điểm chưa phân tích"],a:1,e:"Kết bài khái quát, khẳng định giá trị nội dung/nghệ thuật và ý nghĩa của vấn đề đã phân tích."}
+];
+const area=document.getElementById('quiz-area');
+function renderQuiz(){
+ area.innerHTML='';
+ questions.forEach((q,i)=>{
+  const box=document.createElement('div');box.className='question';box.id='q'+i;
+  const title=document.createElement('p');title.textContent=(i+1)+'. '+q.q;box.appendChild(title);
+  q.o.forEach((op,j)=>{
+   const label=document.createElement('label');label.className='option';
+   const input=document.createElement('input');input.type='radio';input.name='q'+i;input.value=j;
+   const span=document.createElement('span');span.textContent=String.fromCharCode(65+j)+'. '+op;
+   label.append(input,span);box.appendChild(label);
+  });
+  const fb=document.createElement('div');fb.className='feedback';fb.id='f'+i;box.appendChild(fb);area.appendChild(box);
+ });
+}
+renderQuiz();
+document.getElementById('submit').addEventListener('click',()=>{
+ let score=0,answered=0;
+ questions.forEach((q,i)=>{
+  const chosen=document.querySelector('input[name="q'+i+'"]:checked');
+  const fb=document.getElementById('f'+i);fb.className='feedback show';
+  if(chosen){answered++;if(Number(chosen.value)===q.a){score++;fb.classList.add('correct');fb.textContent='Chính xác! '+q.e;}
+   else{fb.classList.add('incorrect');fb.textContent='Chưa chính xác. Đáp án: '+String.fromCharCode(65+q.a)+'. '+q.o[q.a]+'. '+q.e;}}
+  else{fb.classList.add('incorrect');fb.textContent='Bạn chưa chọn đáp án. Đáp án: '+String.fromCharCode(65+q.a)+'. '+q.o[q.a]+'. '+q.e;}
+ });
+ const r=document.getElementById('result');r.style.display='block';
+ r.innerHTML='<div class="score">Kết quả: '+score+'/15 điểm ('+Math.round(score/15*100)+'%)</div><p>Bạn đã trả lời '+answered+'/15 câu.</p><p>'+(score>=13?'Rất tốt! Hãy tiếp tục duy trì và luyện cách vận dụng kiến thức.':score>=9?'Khá tốt! Hãy xem lại những câu sai để củng cố kiến thức.':'Bạn hãy đọc lại phần tóm tắt rồi thử làm lại nhé.')+'</p>';
+ r.scrollIntoView({behavior:'smooth',block:'center'});
+});
+document.getElementById('reset').addEventListener('click',()=>{
+ document.querySelectorAll('input[type=radio]').forEach(x=>x.checked=false);
+ document.querySelectorAll('.feedback').forEach(x=>{x.className='feedback';x.textContent='';});
+ const r=document.getElementById('result');r.style.display='none';window.scrollTo({top:0,behavior:'smooth'});
+});
+document.querySelectorAll('nav button').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+ document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+ btn.classList.add('active');document.getElementById(btn.dataset.tab).classList.add('active');
+}));
+</script>
+</body></html>
